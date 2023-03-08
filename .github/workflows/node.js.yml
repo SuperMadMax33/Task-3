@@ -5,8 +5,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
-    
+    branches: [ "main" ] 
 # jobs запускаются параллельно, если не указана последовательность
 jobs:
   # Название job может быть любым
@@ -21,6 +20,7 @@ jobs:
       - name: npm install, test and build
         run: |
           npm install
+          npm run test
           npm run build
       # Пример однолинейного простого скрипта shell
       - name: Run a one-line script
